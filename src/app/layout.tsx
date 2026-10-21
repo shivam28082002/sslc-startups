@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Unbounded } from "next/font/google";
-import { company, faqs, seo, services } from "@/content/site";
+import { company, faqs, seo, services, techGroups } from "@/content/site";
 import { siteUrl } from "@/lib/site-url";
 import { Analytics } from "@vercel/analytics/next";
 import { MotionProvider } from "@/components/layout/motion-provider";
@@ -90,7 +90,13 @@ const jsonLd = {
           availableLanguage: ["English", "Hindi"],
         },
       ],
-      knowsAbout: services.map((s) => s.name),
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: company.location.locality,
+        addressRegion: company.location.region,
+        addressCountry: company.location.country,
+      },
+      knowsAbout: [...services.map((s) => s.name), ...techGroups.flatMap((g) => g.items)],
       sameAs: company.social.map((s) => s.href).filter(Boolean),
       hasOfferCatalog: {
         "@type": "OfferCatalog",

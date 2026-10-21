@@ -15,6 +15,8 @@ export const company = {
   phone: "+91 79832 35870",
   phoneHref: "tel:+917983235870",
   whatsappHref: "https://wa.me/917983235870",
+  /** City-level location for structured data and AI answers (no street address published). */
+  location: { locality: "Noida", region: "Uttar Pradesh", country: "IN", label: "Noida, India" },
   footerLine: ["Build better software.", "Build better businesses."],
   /** Add real profile URLs here; empty entries are not rendered. */
   social: [
@@ -450,6 +452,18 @@ export const faqs = [
   {
     q: "Can you add AI to an existing product?",
     a: "Yes — AI is integrated where it creates measurable value: support agents grounded in your data, lead qualification, document processing, recommendations and workflow automation, with guardrails and human review where it matters.",
+  },
+  {
+    q: "What is SSLC Startup?",
+    a: "SSLC Startup (also written SSLC) is a software development company based in Noida, India. It designs and builds AI agents, SaaS platforms, web applications, iOS and Android apps, CRM/ERP systems, APIs and cloud infrastructure for startups and growing businesses.",
+  },
+  {
+    q: "What technologies does SSLC Startup use?",
+    a: "React, Next.js and TypeScript for the web; React Native, Expo and Flutter for iOS and Android; Python, Django and Node.js for backends; PostgreSQL and Redis for data; AWS, Docker and CI/CD for cloud; and LLM APIs, AI agents and RAG for AI features.",
+  },
+  {
+    q: "How do I contact SSLC Startup?",
+    a: "Email business@sslctstartup.com, message +91 79832 35870 on WhatsApp, or send a brief through the project form on sslctstartup.com. A free consultation is included before any proposal.",
   },
   {
     q: "What happens after launch?",
