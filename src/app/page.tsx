@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/navigation/site-header";
 import { Hero } from "@/components/hero/hero";
 import { OurWork } from "@/components/work/our-work";
+import { TechStack } from "@/components/tech/tech-stack";
 import { Different } from "@/components/why/different";
 import { ServiceCards } from "@/components/services/service-cards";
 import { FaqSection } from "@/components/faq/faq-section";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <OurWork />
+        <TechStack />
         <Different />
         <ServiceCards />
         <FaqSection />

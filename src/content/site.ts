@@ -57,6 +57,7 @@ export const seo = {
 export const nav = [
   { label: "Work", href: "/#work" },
   { label: "Services", href: "/#services" },
+  { label: "Technology", href: "/#technology" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/#contact" },
 ] as const;

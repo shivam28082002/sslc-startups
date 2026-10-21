@@ -16,6 +16,7 @@ const solutionLinks = [
 const companyLinks = [
   { label: "Work", href: "/#work" },
   { label: "Services", href: "/#services" },
+  { label: "Technology", href: "/#technology" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/#contact" },
   { label: "Client login", href: "/portal/login" },

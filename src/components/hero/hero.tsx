@@ -1,6 +1,8 @@
 import { QuickForm } from "@/components/contact/quick-form";
+import { Marquee } from "@/components/ui/marquee";
+import { TechLogo, techName, type TechId } from "@/components/tech/tech-logos";
 
-const stack = ["Next.js", "React Native", "Django", "Node.js", "AWS", "LLM APIs"];
+const stack: TechId[] = ["nextjs", "react-native", "django", "nodejs", "aws", "llm", "python", "postgresql", "docker", "typescript"];
 
 const stats = [
   { value: "8", label: "Service lines" },
@@ -76,7 +78,7 @@ export function Hero() {
       </div>
 
       <div className="container-x grid items-center gap-12 py-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-16 lg:py-20">
-        <div>
+        <div className="min-w-0">
           <h1
             id="hero-title"
             className="animate-slide-up font-display text-[clamp(1.85rem,0.9rem+2.3vw,2.95rem)] leading-[1.18] font-medium tracking-[-0.02em] text-white"
@@ -89,14 +91,15 @@ export function Hero() {
           </p>
 
           <div className="mt-10 animate-rise [animation-delay:260ms]">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-white/50 uppercase">Built with</p>
-            <ul className="mt-3 flex flex-wrap gap-x-7 gap-y-2">
-              {stack.map((s) => (
-                <li key={s} className="font-display text-[16px] font-medium text-white/85">
-                  {s}
-                </li>
+            <p className="text-[13px] text-white/55">Built with</p>
+            <Marquee pauseOnHover repeat={3} className="mt-3 [--duration:30s] [--gap:0.75rem] [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
+              {stack.map((id) => (
+                <span key={id} className="flex h-11 items-center gap-2.5 rounded-full border border-white/12 bg-white/[0.04] px-4">
+                  <TechLogo id={id} size={18} />
+                  <span className="text-[14.5px] font-medium whitespace-nowrap text-white/90">{techName[id]}</span>
+                </span>
               ))}
-            </ul>
+            </Marquee>
           </div>
         </div>
 
