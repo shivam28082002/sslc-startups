@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { AnimatePresence, m } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { company, nav } from "@/content/site";
@@ -81,6 +82,12 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <Link
+              href="/portal/login"
+              className="hidden h-10 items-center px-2 text-[14px] text-fg/80 transition-colors hover:text-fg lg:inline-flex"
+            >
+              Client login
+            </Link>
             <ThemeToggle />
             <InquiryLink variant="primary" size="md" className="hidden sm:inline-flex">
               Start a Project <ArrowRight size={15} />

@@ -18,6 +18,7 @@ const companyLinks = [
   { label: "Services", href: "/#services" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/#contact" },
+  { label: "Client login", href: "/portal/login" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Refund Policy", href: "/refund-policy" },
   { label: "Cookie Policy", href: "/cookie-policy" },

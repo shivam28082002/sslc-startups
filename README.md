@@ -54,3 +54,17 @@ Everything below is wired to render automatically once filled in `src/content/si
 - **Social profiles** — `company.social[].href` (LinkedIn, Instagram, GitHub are hidden while empty).
 
 The three "Solution blueprint" cards describe how SSLC builds each class of system; they are not client work.
+
+## Client portal (`/portal`)
+
+Clients sign in at **/portal/login** to see their projects (status, dates, milestones) and payments
+(scheduled, due, overdue, paid). SSLC admins manage everything at **/portal/admin**.
+
+- **Database:** Neon Postgres (Vercel Marketplace). Schema in `db/schema.sql`; apply with `npm run db:migrate`.
+- **Auth:** email + password (bcrypt), signed HTTP-only session cookie (`AUTH_SECRET`), login throttling,
+  sessions revoked on password change. Server code in `src/lib/portal/`, pages in `src/app/portal/`.
+- **Admin account:** `npm run portal:admin -- you@sslctstartup.com "Your Name"` prints a temporary password.
+- **Clients:** create them in the admin panel — a temporary password is shown once; share it with the client.
+- **Payments:** stored in paise; admins mark payments paid (method + UTR). The `gateway*` columns are reserved
+  for the upcoming Razorpay/Stripe integration.
+- `/portal` is `noindex` and disallowed in robots.txt.

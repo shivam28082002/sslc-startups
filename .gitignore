@@ -41,3 +41,8 @@ yarn-error.log*
 next-env.d.ts
 
 !.env.example
+
+# agent skill files installed by integrations (local only)
+/.agents/
+/.claude/
+skills-lock.json
