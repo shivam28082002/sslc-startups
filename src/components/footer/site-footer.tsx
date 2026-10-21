@@ -106,12 +106,37 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <p
-          aria-hidden
-          className="pointer-events-none mt-20 text-center text-[clamp(2.5rem,0.25rem+9.5vw,10rem)] leading-[0.8] whitespace-nowrap font-semibold tracking-[-0.06em] text-transparent select-none [-webkit-text-stroke:1px_var(--outline-text)]"
-        >
-          SSLC STARTUP
-        </p>
+        {/* Big brand wordmark — scales to the full container width */}
+        <svg aria-label="SSLC Startup" role="img" viewBox="0 0 1200 170" className="mt-20 block w-full select-none">
+          <defs>
+            <linearGradient id="footer-wordmark" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stopColor="#19c4ff" />
+              <stop offset="0.45" stopColor="#5b5bff" />
+              <stop offset="1" stopColor="#d23dff" />
+            </linearGradient>
+            <linearGradient id="footer-wordmark-fade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0.35" stopColor="#fff" />
+              <stop offset="1" stopColor="#fff" stopOpacity="0.15" />
+            </linearGradient>
+            <mask id="footer-wordmark-mask">
+              <rect width="1200" height="170" fill="url(#footer-wordmark-fade)" />
+            </mask>
+          </defs>
+          <text
+            x="600"
+            y="138"
+            textAnchor="middle"
+            textLength="1190"
+            lengthAdjust="spacingAndGlyphs"
+            fontSize="160"
+            fontWeight="600"
+            fill="url(#footer-wordmark)"
+            mask="url(#footer-wordmark-mask)"
+            style={{ fontFamily: "var(--font-display)", letterSpacing: "-0.03em" }}
+          >
+            SSLC Startup
+          </text>
+        </svg>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-line pt-8 text-[13px] text-subtle sm:flex-row sm:items-center sm:justify-between">
           <p>
