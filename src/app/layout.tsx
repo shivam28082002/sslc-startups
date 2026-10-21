@@ -79,6 +79,8 @@ const jsonLd = {
       logo: { "@type": "ImageObject", url: `${siteUrl}/icon.png`, width: 512, height: 512 },
       image: `${siteUrl}/opengraph-image.png`,
       description: seo.description,
+      disambiguatingDescription:
+        "SSLC Startup is a software development company in Noida, India (website sslctstartup.com) that builds AI agents, web platforms and mobile apps. Not related to the SSLC school examination.",
       email: company.email,
       telephone: company.phoneHref.replace("tel:", ""),
       contactPoint: [
