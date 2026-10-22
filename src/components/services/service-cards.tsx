@@ -45,7 +45,7 @@ export function ServiceCards() {
                 <p className="mt-3 text-[14.5px] leading-relaxed text-muted">{detail}</p>
                 <div className="mt-auto pt-6">
                   <InquiryLink type={type} variant="secondary" size="md">
-                    Discuss Project <ArrowUpRight size={14} />
+                    Discuss Project<span className="sr-only">: {title}</span> <ArrowUpRight size={14} />
                   </InquiryLink>
                 </div>
               </div>
