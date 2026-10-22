@@ -49,7 +49,7 @@ export function Hero() {
         </h1>
         <p className="mx-auto mt-6 max-w-[36rem] animate-rise text-[17px] leading-relaxed text-white/75 [animation-delay:140ms] sm:text-[18px]">
           Sharp strategy, precise engineering. We build AI agents, web platforms and mobile apps for startups and
-          growing businesses.
+          growing businesses, so every release moves your business forward.
         </p>
 
         <div className="mt-9 flex animate-rise flex-col items-center justify-center gap-3 [animation-delay:220ms] sm:flex-row">

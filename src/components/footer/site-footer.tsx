@@ -37,7 +37,7 @@ export function SiteFooter() {
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1.3fr)_repeat(3,minmax(0,1fr))]">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
-              <Image src="/brand/sslc-mark.png" alt="" width={40} height={40} className="size-10" />
+              <Image src="/brand/sslc-mark.png" alt="SSLC Startup logo" width={40} height={40} className="size-10" />
               <span className="flex flex-col leading-none">
                 <span className="text-[17px] font-semibold tracking-[0.04em] text-fg">SSLC</span>
                 <span className="mt-1 font-mono text-[10px] tracking-[0.42em] text-brand">STARTUP</span>
@@ -57,7 +57,7 @@ export function SiteFooter() {
           </div>
 
           <nav aria-label="Solutions">
-            <h2 className="font-mono text-[11px] tracking-[0.2em] text-subtle uppercase">Solutions</h2>
+            <p className="font-mono text-[11px] tracking-[0.2em] text-subtle uppercase">Solutions</p>
             <ul className="mt-5 space-y-3">
               {solutionLinks.map((l) => (
                 <li key={l.label}>
@@ -70,7 +70,7 @@ export function SiteFooter() {
           </nav>
 
           <nav aria-label="Company">
-            <h2 className="font-mono text-[11px] tracking-[0.2em] text-subtle uppercase">Company</h2>
+            <p className="font-mono text-[11px] tracking-[0.2em] text-subtle uppercase">Company</p>
             <ul className="mt-5 space-y-3">
               {companyLinks.map((l) => (
                 <li key={l.label}>
@@ -83,7 +83,7 @@ export function SiteFooter() {
           </nav>
 
           <div>
-            <h2 className="font-mono text-[11px] tracking-[0.2em] text-subtle uppercase">Contact</h2>
+            <p className="font-mono text-[11px] tracking-[0.2em] text-subtle uppercase">Contact</p>
             <ul className="mt-5 space-y-3">
               <li>
                 <a href={`mailto:${company.email}`} className={linkClass}>

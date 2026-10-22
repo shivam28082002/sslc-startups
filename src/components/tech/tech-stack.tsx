@@ -124,7 +124,7 @@ export function TechStack() {
           <div className="absolute top-1/2 left-1/2 size-[480px] -translate-x-1/2 -translate-y-1/2 max-sm:scale-[0.68]">
             <div className="relative flex size-full items-center justify-center">
               <div className="absolute size-28 rounded-full bg-[radial-gradient(closest-side,rgb(138_61_255/0.55),transparent)]" />
-              <Image src="/brand/sslc-mark.png" alt="" width={256} height={256} className="relative size-16 drop-shadow-[0_8px_30px_rgb(168_85_247/0.6)]" />
+              <Image src="/brand/sslc-mark.png" alt="SSLC Startup logo" width={256} height={256} className="relative size-16 drop-shadow-[0_8px_30px_rgb(168_85_247/0.6)]" />
 
               <OrbitingCircles radius={128} duration={34} iconSize={54}>
                 {core.map((t) => (

@@ -87,7 +87,7 @@ export function OurWork() {
                       href="#quote"
                       className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-white underline-offset-4 hover:underline"
                     >
-                      Build something like this <ArrowRight size={14} />
+                      Build something like this<span className="sr-only">: {study.name}</span> <ArrowRight size={14} />
                     </a>
                   </div>
                 </div>

@@ -11,13 +11,13 @@ export function Logo({ className, onClick }: { className?: string; onClick?: () 
     >
       <Image
         src="/brand/sslc-mark.png"
-        alt=""
+        alt="SSLC Startup"
         width={32}
         height={32}
         priority
         className="size-8 transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:-rotate-6"
       />
-      <span className="flex flex-col leading-none">
+      <span aria-hidden className="flex flex-col leading-none">
         <span className="text-[15px] font-semibold tracking-[0.04em] text-fg">SSLC</span>
         <span className="mt-1 font-mono text-[9.5px] tracking-[0.42em] text-brand">STARTUP</span>
       </span>

@@ -27,9 +27,9 @@ export const company = {
 } as const;
 
 export const seo = {
-  title: "SSLC Startup | Software Development, AI & App Development Company",
+  title: "SSLC Startup | AI, Web & App Development Company",
   description:
-    "SSLC Startup (SSLC) is a software development company building AI agents, SaaS platforms, web apps, iOS & Android apps, CRM/ERP systems and cloud solutions for startups and businesses. Free consultation.",
+    "SSLC Startup builds AI agents, SaaS platforms, web and mobile apps and CRM/ERP systems for startups and growing businesses. Free consultation.",
   /** Brand spellings people search for — used for site name & structured data. */
   alternateNames: ["SSLC", "SSLC Startup", "SSLC Start-up", "sslctstartup", "SSLC Startups"],
   keywords: [
