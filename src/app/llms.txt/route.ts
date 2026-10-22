@@ -40,6 +40,7 @@ export function GET() {
     ...faqs.flatMap((f) => [`### ${f.q}`, f.a, ""]),
     "## Pages",
     `- [Home](${siteUrl}/): services, work, technology, FAQ and contact`,
+    `- [About](${siteUrl}/about): company details, founder, Udyam registration, how we work`,
     `- [Privacy Policy](${siteUrl}/privacy)`,
     `- [Refund Policy](${siteUrl}/refund-policy)`,
     `- [Cookie Policy](${siteUrl}/cookie-policy)`,

@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { AnimatePresence, m } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { company, nav } from "@/content/site";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Mail, WhatsApp } from "@/components/ui/icons";
+import { ArrowRight, LinkedIn, Mail, WhatsApp } from "@/components/ui/icons";
 import { InquiryLink } from "@/components/ui/inquiry-link";
 import { Logo } from "@/components/ui/logo";
 import { ThemeToggle } from "./theme-toggle";
@@ -14,6 +15,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
+  const pathname = usePathname();
   const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -104,7 +106,8 @@ export function SiteHeader() {
           <nav aria-label="Primary" className="hidden md:block">
             <ul className="flex items-center gap-0.5 rounded-full border border-line bg-fg/[0.03] p-1">
               {nav.map((item) => {
-                const isActive = active === item.href.split("#")[1];
+                const hash = item.href.split("#")[1];
+                const isActive = hash ? pathname === "/" && active === hash : pathname === item.href;
                 return (
                   <li key={item.href}>
                     <a
@@ -211,6 +214,13 @@ export function SiteHeader() {
                   <a href={company.whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 hover:text-fg">
                     <WhatsApp size={15} /> WhatsApp · {company.phone}
                   </a>
+                  {company.social
+                    .filter((s) => s.label === "LinkedIn" && s.href)
+                    .map((s) => (
+                      <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 hover:text-fg">
+                        <LinkedIn size={15} /> Follow us on LinkedIn
+                      </a>
+                    ))}
                 </div>
               </m.div>
             </nav>

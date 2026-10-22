@@ -17,6 +17,13 @@ export const company = {
   whatsappHref: "https://wa.me/919718041853",
   /** City-level location for structured data and AI answers (no street address published). */
   location: { locality: "Noida", region: "Uttar Pradesh", country: "IN", label: "Noida, India" },
+  /** Shown on /about. Facts confirmed by the owner only. */
+  founder: {
+    name: "Shivam Tyagi",
+    role: "Founder",
+    linkedin: "https://www.linkedin.com/in/shivam-tyagi-48a996285/",
+    bio: "Shivam leads product and engineering at SSLC Startup. A Python and AI engineer, he works across backends, cloud infrastructure and AI systems, and is involved in every project from the first call to launch.",
+  },
   /** Government of India MSME (Udyam) registration — publicly verifiable. */
   registration: {
     label: "Udyam Registered MSME",
@@ -69,6 +76,7 @@ export const nav = [
   { label: "Services", href: "/#services" },
   { label: "Technology", href: "/#technology" },
   { label: "FAQ", href: "/#faq" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
 ] as const;
 

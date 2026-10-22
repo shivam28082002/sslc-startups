@@ -23,6 +23,11 @@ export const ArrowRight = (p: IconProps) => (
     <path d="M5 12h14M13 6l6 6-6 6" />
   </svg>
 );
+export const LinkedIn = (p: IconProps) => (
+  <svg {...base(p)} fill="currentColor" stroke="none">
+    <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.6 4.77 6v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11Z" />
+  </svg>
+);
 export const ArrowUpRight = (p: IconProps) => (
   <svg {...base(p)}>
     <path d="M7 17 17 7M8 7h9v9" />

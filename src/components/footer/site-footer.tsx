@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { company, services } from "@/content/site";
 import { Tagline } from "@/components/hero/tagline";
+import { LinkedIn } from "@/components/ui/icons";
 
 const solutionLinks = [
   { label: "AI", id: "ai" },
@@ -14,6 +15,7 @@ const solutionLinks = [
 ].filter((l) => services.some((s) => s.id === l.id));
 
 const companyLinks = [
+  { label: "About", href: "/about" },
   { label: "Work", href: "/#work" },
   { label: "Services", href: "/#services" },
   { label: "Technology", href: "/#technology" },
@@ -66,6 +68,23 @@ export function SiteFooter() {
                 {company.registration.number}
               </a>
             </p>
+            {social.length ? (
+              <ul aria-label="Follow SSLC Startup" className="mt-6 flex gap-2.5">
+                {social.map((s) => (
+                  <li key={s.label}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${company.name} on ${s.label}`}
+                      className="grid size-10 place-items-center rounded-full border border-line-strong text-fg/80 transition-colors hover:border-fg hover:bg-[#0a66c2] hover:text-white"
+                    >
+                      {s.label === "LinkedIn" ? <LinkedIn size={17} /> : s.label.slice(0, 2)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
 
           <nav aria-label="Solutions">
@@ -109,7 +128,8 @@ export function SiteFooter() {
               </li>
               {social.map((s) => (
                 <li key={s.label}>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                  <a href={s.href} target="_blank" rel="noopener noreferrer" className={`${linkClass} inline-flex items-center gap-2`}>
+                    {s.label === "LinkedIn" ? <LinkedIn size={14} /> : null}
                     {s.label}
                   </a>
                 </li>
