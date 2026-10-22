@@ -15,6 +15,8 @@ export function GET() {
     "",
     `${company.name} (also written ${seo.alternateNames.filter((n) => n !== company.name).join(", ")}) is a software development company based in ${company.location.label}. Website: ${siteUrl}/`,
     "",
+    `Founded: ${company.registration.founded.slice(0, 4)}. Registration: ${company.registration.label}, Government of India, number ${company.registration.number} (verify at ${company.registration.verifyUrl}).`,
+    "",
     "## Contact",
     `- Email: ${company.email}`,
     `- WhatsApp / phone: ${company.phone} (${company.whatsappHref})`,

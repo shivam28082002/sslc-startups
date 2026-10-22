@@ -17,6 +17,14 @@ export const company = {
   whatsappHref: "https://wa.me/919718041853",
   /** City-level location for structured data and AI answers (no street address published). */
   location: { locality: "Noida", region: "Uttar Pradesh", country: "IN", label: "Noida, India" },
+  /** Government of India MSME (Udyam) registration — publicly verifiable. */
+  registration: {
+    label: "Udyam Registered MSME",
+    /** As on the Udyam certificate (date of incorporation / registration of enterprise). */
+    founded: "2024-02-01",
+    number: "UDYAM-UP-28-0248151",
+    verifyUrl: "https://udyamregistration.gov.in/Udyam_Verify.aspx",
+  },
   footerLine: ["Build better software.", "Build better businesses."],
   /** Add real profile URLs here; empty entries are not rendered. */
   social: [
@@ -456,6 +464,10 @@ export const faqs = [
   {
     q: "What is SSLC Startup?",
     a: "SSLC Startup (also written SSLC) is a software development company based in Noida, India. It designs and builds AI agents, SaaS platforms, web applications, iOS and Android apps, CRM/ERP systems, APIs and cloud infrastructure for startups and growing businesses.",
+  },
+  {
+    q: "Is SSLC Startup a registered business?",
+    a: "Yes. SSLC Startup is registered as a Micro enterprise (MSME) with the Government of India's Ministry of Micro, Small & Medium Enterprises under the Udyam scheme, registration number UDYAM-UP-28-0248151. Anyone can verify it on udyamregistration.gov.in.",
   },
   {
     q: "What technologies does SSLC Startup use?",

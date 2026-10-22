@@ -54,6 +54,18 @@ export function SiteFooter() {
               {company.name} is a software development company building AI agents, SaaS platforms, web applications,
               iOS &amp; Android apps, CRM/ERP systems and cloud infrastructure for startups and growing businesses.
             </p>
+            <p className="mt-4 text-[13px] text-muted">
+              {company.registration.label} ·{" "}
+              <a
+                href={company.registration.verifyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono whitespace-nowrap text-fg/85 underline-offset-4 hover:text-fg hover:underline"
+                title="Verify on the Government of India Udyam portal"
+              >
+                {company.registration.number}
+              </a>
+            </p>
           </div>
 
           <nav aria-label="Solutions">

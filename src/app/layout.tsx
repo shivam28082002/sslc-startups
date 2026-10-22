@@ -92,6 +92,12 @@ const jsonLd = {
           availableLanguage: ["English", "Hindi"],
         },
       ],
+      foundingDate: company.registration.founded,
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "Udyam Registration Number (MSME, Government of India)",
+        value: company.registration.number,
+      },
       address: {
         "@type": "PostalAddress",
         addressLocality: company.location.locality,
