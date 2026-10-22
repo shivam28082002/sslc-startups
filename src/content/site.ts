@@ -12,9 +12,9 @@ export const company = {
   wordmark: "SSLC STARTUP",
   tagline: "Software product engineering",
   email: "business@sslctstartup.com",
-  phone: "+91 79832 35870",
-  phoneHref: "tel:+917983235870",
-  whatsappHref: "https://wa.me/917983235870",
+  phone: "+91 97180 41853",
+  phoneHref: "tel:+919718041853",
+  whatsappHref: "https://wa.me/919718041853",
   /** City-level location for structured data and AI answers (no street address published). */
   location: { locality: "Noida", region: "Uttar Pradesh", country: "IN", label: "Noida, India" },
   footerLine: ["Build better software.", "Build better businesses."],
@@ -463,7 +463,7 @@ export const faqs = [
   },
   {
     q: "How do I contact SSLC Startup?",
-    a: "Email business@sslctstartup.com, message +91 79832 35870 on WhatsApp, or send a brief through the project form on sslctstartup.com. A free consultation is included before any proposal.",
+    a: "Email business@sslctstartup.com, message +91 97180 41853 on WhatsApp, or send a brief through the project form on sslctstartup.com. A free consultation is included before any proposal.",
   },
   {
     q: "What happens after launch?",
